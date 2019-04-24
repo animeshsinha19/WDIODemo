@@ -1,0 +1,33 @@
+{
+  "name": "sneakers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "npm": "^6.9.0",
+    "webdriverio": "^5.7.13"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "@wdio/cli": "^5.7.13",
+    "@wdio/local-runner": "^5.7.13",
+    "@wdio/mocha-framework": "^5.7.13",
+    "@wdio/selenium-standalone-service": "^5.7.8",
+    "@wdio/sync": "^5.7.13",
+    "chai": "^4.2.0",
+    "selenium-standalone": "^6.16.0"
+  },
+  "scripts": {
+    "clean": "rm -rf compiled-test",
+    "build": "npm run clean && babel test -s -d compiled-test",
+    "test": "npm run build && wdio wdio.conf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
